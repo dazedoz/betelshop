@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Betelshop</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+
+   <body>
+    <header>
+
+        <input type="checkbox" name="" id="toggler">
+        <label for="toggler" class="fas fa-bars"> </label>
+
+        <a href="#" class="logo">Betelshop</a>
+
+        <nav class="navbar">
+            <a href="#home">główna</a>
+            <a href="#about">o nas</a>
+            <a href="#products">produkty</a>
+            <a href="#review">recenzje</a>
+            <a href="#contact">kontakt</a>
+        </nav>
+
+        <div class="icons">
+            <a href="#" class="heart"> <ion-icon name="heart-outline"></ion-icon> </a>
+            <a href="#" class="cart"> <ion-icon name="cart-outline"></ion-icon> </a>
+            <a href="#" class="user"> <ion-icon name="person-outline"></ion-icon> </a>
+        </div>
+
+    </header>
+
+
+    <section class="home" id="home">
+        <div class="content">
+            <h3>Najgorętszy sklep muzyczny w twojej okolicy</h3>
+            <span> wiele trudno dostępnych płyt </span>
+            <p> Skupujemy oraz sprzedajemy płyty CD, u nas znajdziesz najróżniejsze płyty w wielu gatunkach. Oferujemy dobre ceny oraz gwarancję zakupu. 
+                Gdyby coś było nie tak zwrócimy pieniądze! Zapraszamy do zapoznania się z naszą ofertą.
+            </p>
+            <a href="#" class="przycisk" onclick="alert('zapraszamy!')">kup teraz</a>
+        </div>
+    </section>
+    
+
+   <section class="about" id="about">
+
+        <h1 class="heading"> <span> kilka słów o </span> nas </h1>
+
+        <div class="row">
+            <div class="video_container">
+                <video src="store.mp4" loop autoplay muted> </video>
+                <h3> najrzadsze płyty w naszym asortymencie </h3>
+            </div>
+
+            <div class="content">
+                <h3> dlaczego my?</h3>
+                <p> Specjalizujemy się w sprzedaży płyt już od wielu lat. Posiadamy również największą kolekcję w mieście, 
+                    a nawet województwie. Jesteśmy polecanym sklepem przez wielu ludzi, a także oferujemy zniżki dla stałych klientów.
+                    Dokładamy wszelkich starań, aby sprowadzać rzadkie płyty i te, które są oczekiwane przez konsumentów.
+                </p>
+                <a class="przycisk" onclick="alert('posiadamy również licencjonowane koszulki zespołów oraz naszywki. Znajdziesz je w naszym stacjonarnym sklepie. Możemy zlecić zamówienie na płytę, chętnie porozmawiamy o muzyce. U nas zawsze panuje miła atmosfera. Zapraszamy!')">dowiedz się więcej</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="icons_container">
+
+        <div class="icons">
+            <img src="jpg/dostawa.png" alt="wysylka">
+            <div class="info">
+                <h3> darmowa wysyłka </h3>
+                <span> dla zamówień powyżej 150zł </span>
+            </div>
+        </div>
+
+        <div class="icons">
+            <img src="jpg/zwrot.png" alt="zwrot_pieniedzy">
+            <div class="info">
+                <h3> 5 dni na darmowy zwrot </h3>
+                <span> jeśli zamówienie nie spełnia Twoich oczekiwań, masz 5 dni na odesłanie nam produktów </span>
+            </div>
+        </div>
+
+        <div class="icons">
+            <img src="jpg/bezpieczenstwo.png" alt="bezpieczenstwo">
+            <div class="info">
+                <h3> Szyfrowana płatność </h3>
+                <span> wiele metod płatności </span>
+            </div>
+        </div>
+
+        <div class="icons">
+            <img src="jpg/faq.png" alt="faq">
+            <div class="info">
+                <h3> FAQ </h3>
+                <span> staramy się odpowiadać jak najszybciej na pytania klientów </span>
+            </div>
+        </div>
+    </section>
+
+    <section class="products" id="products">
+        <h1 class="heading"> wyprzedaż <span> płyt </span></h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <span class="discount">-5%</span>
+                <div class="image">
+                    <img src="jpg/deftones_diamondyeyes.jpg" alt="plyta_cd">
+                    <div class="icons">
+                        <a class="fas fa-heart"></a>
+                        <a class="cart-btn"> do koszyka</a>
+                        <a class="fas fa-share" onclick="alert('udostępniono!')"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>Deftones - Diamond Eyes </h3>
+                    <div class="price"> 38zł <span> 40zł</span></div>
+                </div>
+            </div>
+
+            <div class="box">
+                <span class="discount">-10%</span>
+                <div class="image">
+                    <img src="jpg/kreator_violentrevolution.jpg" alt="plyta_cd">
+                    <div class="icons">
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="cart-btn"> do koszyka</a>
+                        <a href="#" class="fas fa-share"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>Kreator -Violent Revolution </h3>
+                    <div class="price"> 54zł <span> 60zł </span></div>
+                </div>
+            </div>
+
+            <div class="box">
+                <span class="discount">-5%</span>
+                <div class="image">
+                    <img src="jpg/batusha_litourgiya.jpg" alt="plyta_cd">
+                    <div class="icons">
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="cart-btn"> do koszyka</a>
+                        <a href="#" class="fas fa-share"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>Batushka - Litourgiya</h3>
+                    <div class="price"> 22,80zł <span> 24zł </span></div>
+                </div>
+            </div>
+
+            <div class="box">
+                <span class="discount">-20%</span>
+                <div class="image">
+                    <img src="jpg/possessed_sevenchurches.jpg" alt="plyta_cd">
+                    <div class="icons">
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="cart-btn"> do koszyka</a>
+                        <a href="#" class="fas fa-share"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>Possessed - Seven Churches</h3>
+                    <div class="price"> 108zł <span> 120zł </span></div>
+                </div>
+            </div>
+
+            <div class="box">
+                <span class="discount">-10%</span>
+                <div class="image">
+                    <img src="jpg/samael_ceremonyofoposites.jpg" alt="plyta_cd">
+                    <div class="icons">
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="cart-btn"> do koszyka</a>
+                        <a href="#" class="fas fa-share"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>Samael - Ceremony Of Oposities</h3>
+                    <div class="price"> 171zł <span> 190zł </span></div>
+                </div>
+            </div>
+
+            <div class="box">
+                <span class="discount">-5%</span>
+                <div class="image">
+                    <img src="jpg/sepultura_chaosad.jpg" alt="plyta_cd">
+                    <div class="icons">
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="cart-btn"> do koszyka</a>
+                        <a href="#" class="fas fa-share"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>Sepultrua - Chaos Ad</h3>
+                    <div class="price"> 47,50zł <span> 50zł </span></div>
+                </div>
+            </div>
+
+
+            <div class="box">
+                <span class="discount"> -20% </span>
+                <div class="image">
+                    <img src="jpg/tsp_theinfinitesadness.jpg" alt="plyta_cd">
+                    <div class="icons">
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="cart-btn"> do koszyka</a>
+                        <a href="#" class="fas fa-share"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>The Smashing Pumpkins - Infinite Sadness</h3>
+                    <div class="price"> 80zł <span> 100zł </span></div>
+                </div>
+            </div>
+
+            <div class="box">
+                <span class="discount">-5%</span>
+                <div class="image">
+                    <img src="jpg/swietliki_cacycacy.jpg" alt="plyta_cd">
+                    <div class="icons">
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="cart-btn"> do koszyka</a>
+                        <a href="#" class="fas fa-share"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>Świetliki - Cacy Cacy Fleischmaschine</h3>
+                    <div class="price"> 85,50zł <span> 90zł </span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <h1 class="heading"> ostatnio dodane <span> płyty </span></h1>
+
+    <div id="slider">
+        <input type="radio" name="slider" id="slide1" checked>
+        <input type="radio" name="slider" id="slide2">
+        <input type="radio" name="slider" id="slide3">
+        <input type="radio" name="slider" id="slide4">
+        <div id="slides">
+           <div id="overflow">
+              <div class="inner">
+                 <div class="slide slide_1">
+                    <div class="slide-content">
+                       <h2>Gorillaz</h2>
+                   </div>
+                 </div>
+                 <div class="slide slide_2">
+                    <div class="slide-content">
+                       <h2>The Doors</h2>
+                       
+                    </div>
+                 </div>
+                 <div class="slide slide_3">
+                    <div class="slide-content">
+                       <h2>The Beatles</h2>
+                       
+                    </div>
+                 </div>
+                 <div class="slide slide_4">
+                    <div class="slide-content">
+                       <h2>Hey</h2>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+        <div id="controls">
+           <label for="slide1"></label>
+           <label for="slide2"></label>
+           <label for="slide3"></label>
+           <label for="slide4"></label>
+        </div>
+        <div id="bullets">
+           <label for="slide1"></label>
+           <label for="slide2"></label>
+           <label for="slide3"></label>
+           <label for="slide4"></label>
+        </div>
+     </div>
+
+
+    <section class="review" id="review">
+        <h1 class="heading"> recenzje <span> klientów </span></h1>
+        <div class="box-container">
+            <div class="box">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  
+                </div>
+                <p> Płyty nie w moim klimacie. Kontakt bezproblemowy, ale nie znalazłem nic dla siebie. Kot słucha za mnie, 
+                    chyba mu sie podoba, dużo miałczy. </p>
+                <div class="customer">
+                    <div class="customer_nick">
+                        <h3> Annonymous</h3>
+                        <span> średnio hepi, za to kot hepi hepi hepi </span>
+                    </div>
+                </div>
+                <span class="fas fa-quote-right"> </span>
+            </div>
+
+            <div class="box">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p> Dziękuję za składankę kolęd Krzysztofa Krawczyka, 
+                    kocham jej słuchać z synem jednym w trójcy, poprawia mi humor i życie domowe. Pozdrawiam. </p>
+                <div class="customer">
+                    <div class="customer_nick">
+                        <h3> Borzenna</h3>
+                        <span> hepi hepi hepi </span>
+                    </div>
+                </div>
+                <span class="fas fa-quote-right"> </span>
+            </div>
+
+            
+            <div class="box">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p> Otrzymałam od męża płytę, nie wiedziałam co to za płyta, ale od momentu pierwszego odsłuchu nie mogę przestać jej słuchać. 
+                    Objawiła mi ukryty talent: śpiew. Będę tu zaglądać po więcej! </p>
+                <div class="customer">
+                    <div class="customer_nick">
+                        <h3> BEATRON3000 </h3>
+                        <span> hepi hepi hepi </span>
+                    </div>
+                </div>
+                <span class="fas fa-quote-right"> </span>
+            </div>
+         </div>
+    </section>
+
+
+    <section class="contact" id="contact">
+
+        <h1 class="heading"> <span> skontaktuj się z </span> nami </h1>
+
+        <div class="row">
+            <form action="">
+                <input type="text" placeholder="imie i nazwisko" class="box">
+                <input type="email" placeholder="email" class="box">
+                <input type="number" placeholder="numer telefonu" class="box">
+                <textarea name="text" class="box" placeholder="wiadomość" id="" cols="30" rows="10"> </textarea>
+                <input type="checkbox" value="akceptacja" class="przycisk">akceptuję warunki kulturalnych wiadomości
+                <input type="submit" value="wyślij wiadomość" class="przycisk" onclick="alert('dziękujęmy za kontakt. dołożymy starań, aby odpowiedzieć jak najszybciej.')">
+                
+            </form>
+
+            <div class="image">
+                <img src="jpg/sprzedawcy.jpg" alt="zdjecie_sprzedawcow">
+            </div>
+        </div>
+    </section>
+
+    <section class="footer" id="footer">
+
+        <div class="box-container">
+            <div class="box">
+                <h3> szybki dostęp </h3>
+                <a href="#"> główna </a>
+                <a href="#"> o nas </a>
+                <a href="#"> produkty </a>
+                <a href="#"> recenzje </a>
+                <a href="#"> kontakt </a>
+            </div>
+       
+
+        <div class="box">
+            <h3> twoje konto </h3>
+            <a href="#"> konto </a>
+            <a href="#"> zamówienia </a>
+            <a href="#"> polubione </a>
+        </div>
+
+        <div class="box">
+            <h3> znajdź nas </h3>
+            <a href="#"> <ion-icon name="logo-facebook"></ion-icon> facebook </a>
+            <a href="#"> <ion-icon name="logo-amazon"></ion-icon> amazon </ion-icon> </a>
+            <a href="#"> <ion-icon name="logo-google-playstore"></ion-icon> google play </a>
+            <a href="#"> <ion-icon name="logo-apple-appstore"></ion-icon> apple store </a>
+        </div>
+
+        <div class="box">
+            <h3> kontakt z nami </h3>
+            <a href="#"> +48 666 999 333 </a>
+            <a href="#"> betelshop@shop.com </a>
+            <a href="#"> Kociakowa 13, 09-077 Czeczałowice  </a>
+        </div>
+    </div>
+   </section>
+
+
+<!-- script -->
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const userLink = document.querySelector(".user");
+    const popupForm = document.createElement("div");
+    popupForm.classList.add("popup-form");
+
+    popupForm.innerHTML = `
+      <form>
+        <h1>Zaloguj się</h1>
+        <label for="login">Login:</label>
+        <input type="text" id="login" name="login" required>
+
+        <label for="password">Hasło:</label>
+        <input type="password" id="password" name="password" required>
+
+        <input type="submit" value="Zaloguj">
+      </form>
+      <span class="close-popup">&times;</span>
+    `;
+
+    userLink.addEventListener("click", function () {
+      document.body.appendChild(popupForm);
+    });
+
+    document.addEventListener("click", function (event) {
+      if (event.target.classList.contains("close-popup")) {
+        document.body.removeChild(popupForm);
+      }
+    });
+  });
+
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const userLink = document.querySelector(".heart");
+    const popupForm = document.createElement("div");
+    popupForm.classList.add("popup-form");
+
+    popupForm.innerHTML = `
+        <h1>nie masz nic polubionego</h1>
+        <span class="close-popup">&times;</span>
+      `;
+
+    userLink.addEventListener("click", function () {
+      document.body.appendChild(popupForm);
+    });
+
+    document.addEventListener("click", function (event) {
+      if (event.target.classList.contains("close-popup")) {
+        document.body.removeChild(popupForm);
+      }
+    });
+  });
+
+</script>
+
+    </body>
+</html>

@@ -1,0 +1,1616 @@
+/* 
+Globalne Style
+
+Opis: Resetowanie marginesów, paddingu i ustawienia czcionki dla wszystkich elementów. Dodatkowo, usunięcie obramowania, podkreślenia oraz nadanie płynnego przejścia dla elementów.
+
+Markup:
+<p>Domyślna czcionka w HTMLU</p>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: .2s linear;
+    font-family: "Tahoma", sans-serif;
+  }
+</style>
+
+Style guide: 1.0
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: .2s linear ;
+    font-family: "Tahoma", sans-serif;
+}
+
+/*
+Ustawienia podstawowe dla html
+
+Opis: Ten zestaw stylów jest aplikowany do dokumentu HTML w celu zapewnienia spójnego i przyjaznego dla użytkownika wyglądu.
+
+Markup:
+<style>
+  html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+  }
+</style>
+
+Styleguide 1.1
+*/
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+/*
+Styl dla sekcji heading.
+
+Styl dla nagłówka sekcji, zawierający efekt tła i specjalne stylizacje dla elementów span.
+
+Markup: 
+<style>
+.heading {
+    text-align: center;
+    font-size: 4rem;
+    color: #333;
+    padding: 1rem;
+    margin: 2rem 0;
+    background: rgba(255,51,153,.05);
+}
+.heading span {
+    color: #a6386b;
+}
+</style>
+
+<h1 class="heading"> <span> kilka słów o </span> nas </h1>
+
+ Styleguide 2.0
+*/
+
+.heading {
+    text-align: center;
+    font-size: 4rem;
+    color: #333;
+    padding: 1rem;
+    margin: 2rem 0;
+    background: rgba(255,51,153,.05);
+}
+
+.heading span {
+    color: #a6386b;
+
+}
+
+/*
+Styl dla przycisków.
+
+Definiuje styl dla przycisku, zawierającego specjalne style dla efektu hover.
+
+Markup: 
+<style>
+.przycisk {
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: #333;
+    color: #efefef;
+    padding: .9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+.przycisk:hover {
+    background: #a6386b;
+}
+</style>
+
+<a href="#" class="przycisk" onclick="alert('zapraszamy!')">kup teraz</a>
+<a class="przycisk" onclick="alert('posiadamy również licencjonowane koszulki zespołów oraz naszywki. Znajdziesz je w naszym stacjonarnym sklepie. Możemy zlecić zamówienie na płytę, chętnie porozmawiamy o muzyce. U nas zawsze panuje miła atmosfera. Zapraszamy!')">dowiedz się więcej</a>
+<input type="checkbox" value="akceptacja" class="przycisk">akceptuję warunki kulturalnych wiadomości
+<input type="submit" value="wyślij wiadomość" class="przycisk" onclick="alert('dziękujęmy za kontakt. dołożymy starań, aby odpowiedzieć jak najszybciej.')">
+
+Styleguide 3.0
+*/
+
+.przycisk {
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: #333;
+    color: #efefef;
+    padding: .9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+.przycisk:hover {
+    background: #a6386b;
+}
+
+/* 
+Nagłówek (header) dla logo, nav i icons.
+
+Definiuje wygląd górnej części strony. 
+
+Markup:
+<header>
+        <input type="checkbox" name="" id="toggler">
+        <label for="toggler" class="fas fa-bars"> </label>
+            <a href="#" class="logo">Betelshop</a>
+        <nav class="navbar">
+            <a href="#home">główna</a>
+            <a href="#about">o nas</a>
+            <a href="#products">produkty</a>
+            <a href="#review">recenzje</a>
+            <a href="#contact">kontakt</a>
+        </nav>
+        <div class="icons">
+            <a href="#" class="heart"> <ion-icon name="heart-outline"></ion-icon> </a>
+            <a href="#" class="cart"> <ion-icon name="cart-outline"></ion-icon> </a>
+            <a href="#" class="user"> <ion-icon name="person-outline"></ion-icon> </a>
+        </div>
+</header>
+
+Styleguide 2.1
+*/
+
+header {
+    position: fixed;
+    top:0; left: 0; right: 0;
+    background: #a899a0;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0.5rem 1rem rgba(0,0,0,.1);
+}
+
+/*
+Header - wygląd i układ.
+
+Styl dla logo, paska nawigacyjnego oraz ikonek.
+
+Markup:
+   <header>
+        <input type="checkbox" name="" id="toggler">
+        <label for="toggler" class="fas fa-bars"> </label>
+        <a href="#" class="logo">Betelshop</a>
+        <nav class="navbar">
+            <a href="#home">główna</a>
+            <a href="#about">o nas</a>
+            <a href="#products">produkty</a>
+            <a href="#review">recenzje</a>
+            <a href="#contact">kontakt</a>
+        </nav>
+        <div class="icons">
+            <a href="#" class="heart"> <ion-icon name="heart-outline"></ion-icon> </a>
+            <a href="#" class="cart"> <ion-icon name="cart-outline"></ion-icon> </a>
+            <a href="#" class="user"> <ion-icon name="person-outline"></ion-icon> </a>
+        </div>
+    </header>
+
+    Styleguide 2.2
+*/
+
+header .logo {
+    font-size: 3rem;
+    color: #a6386b;
+    font-weight: bolder;
+}
+
+header .navbar a {
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: #050000;
+}
+
+header .navbar a:hover{
+    color: #a6386b;
+}
+
+header .icons a {
+    font-size: 3rem;
+    color: #333;
+    margin-left: 1.5rem;
+}
+
+header .icons a:hover {
+    color: #a6386b;
+}
+
+header #toggler {
+    display: none;
+}
+
+header .fa-bars {
+    font-size: 3rem;
+    color: #333;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: .1rem solid rgba(0,0,0,.3);
+    display: none;
+}
+
+/*
+Strona Główna (Home)
+
+Opis: Definiuje styl dla sekcji "home", która jest pierwszym widocznym elementem strony. Zawiera tło z obrazem i zawartość.
+
+Markup:
+<style>
+.home {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url(jpg/sklep.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+</style>
+
+<section class="home" id="home">
+        <div class="content">
+            <h3>Najgorętszy sklep muzyczny w twojej okolicy</h3>
+            <span> wiele trudno dostępnych płyt </span>
+            <p> Skupujemy oraz sprzedajemy płyty CD, u nas znajdziesz najróżniejsze płyty w wielu gatunkach. Oferujemy dobre ceny oraz gwarancję zakupu. 
+                Gdyby coś było nie tak zwrócimy pieniądze! Zapraszamy do zapoznania się z naszą ofertą.
+            </p>
+            <a href="#" class="przycisk" onclick="alert('zapraszamy!')">kup teraz</a>
+        </div>
+    </section>
+
+Styleguide 4.0
+*/
+
+.home {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url(jpg/sklep.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/*
+Styl dla home nagłówek, span i akapit.
+
+Opis: Styl dla zawartości w sekcji "home", zawierający nagłówek, span i akapit.
+
+Markup:
+<style>
+.home .content {
+    max-width: 50rem;
+}
+
+.home .content h3 {
+    font-size: 6rem;
+    color: #333;
+}
+
+
+.home .content span {
+    font-size: 3.5rem;
+    color: #a6386b;
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+.home .content p {
+    font-size: 1.5rem;
+    color: #999;
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+</style>
+
+<section class="home" id="home">
+        <div class="content">
+            <h3>Najgorętszy sklep muzyczny w twojej okolicy</h3>
+            <span> wiele trudno dostępnych płyt </span>
+            <p> Skupujemy oraz sprzedajemy płyty CD, u nas znajdziesz najróżniejsze płyty w wielu gatunkach. Oferujemy dobre ceny oraz gwarancję zakupu. 
+                Gdyby coś było nie tak zwrócimy pieniądze! Zapraszamy do zapoznania się z naszą ofertą.
+            </p>
+            <a href="#" class="przycisk" onclick="alert('zapraszamy!')">kup teraz</a>
+        </div>
+    </section>
+
+Styleguide 4.1
+*/
+
+.home .content {
+    max-width: 50rem;
+}
+
+.home .content h3 {
+    font-size: 6rem;
+    color: #333;
+}
+
+
+.home .content span {
+    font-size: 3.5rem;
+    color: #a6386b;
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+.home .content p {
+    font-size: 1.5rem;
+    color: #999;
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+/*
+Styl dla O Nas (About)
+
+Opis: Styl dla sekcji "About", zawierający dwa elementy w układzie szeregowym.
+
+Markup:
+<style>
+.about .row {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+}
+<style>
+
+<section class="about" id="about">
+        <h1 class="heading"> <span> kilka słów o </span> nas </h1>
+        <div class="row">
+            <div class="video_container">
+                <video src="store.mp4" loop autoplay muted> </video>
+                <h3> najrzadsze płyty w naszym asortymencie </h3>
+            </div>
+</section>
+
+Styleguide 5.0
+*/
+
+
+.about .row {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+}
+
+/*
+Styl dla about (video)
+
+Opis: Styl dla kontenera wideo w sekcji "About", zawierający tytuł wideo.
+
+Markup:
+<style>
+.about .row .video_container {
+    flex: 1 1 40rem;
+    position: relative;
+
+}
+
+.about .row .video_container video {
+    width: 100%;
+    border: 1.5rem solid #efefef;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    height: 100%;
+    object-fit: cover;
+}
+
+.about .row .video_container h3 {
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%);
+    font-size: 3rem;
+    background: #efefef;
+    width: 100%;
+    padding: 1rem 2rem;
+    text-align: center;
+    mix-blend-mode: screen;
+}
+</style>
+
+ <div class="video_container">
+                <video src="store.mp4" loop autoplay muted> </video>
+                <h3> najrzadsze płyty w naszym asortymencie </h3>
+            </div>
+
+Styleguide 5.1
+*/
+
+.about .row .video_container {
+    flex: 1 1 40rem;
+    position: relative;
+
+}
+
+.about .row .video_container video {
+    width: 100%;
+    border: 1.5rem solid #efefef;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    height: 100%;
+    object-fit: cover;
+}
+
+.about .row .video_container h3 {
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%);
+    font-size: 3rem;
+    background: #efefef;
+    width: 100%;
+    padding: 1rem 2rem;
+    text-align: center;
+    mix-blend-mode: screen;
+}
+
+/*
+Styl dla about - nagłówek i akapit.
+
+Opis: Styl dla treści w sekcji "About", zawierający nagłówek i akapit.
+
+Markup:
+<style>
+.about .row .content {
+    flex: 1 1 40rem;
+}
+.about .row .content h3 {
+    font-size: 3rem;
+    color: #333;
+}
+.about .row .content p {
+    font-size: 1.5rem;
+    color: #999;
+    padding: .5rem 0;
+    padding-top: 1rem;
+    line-height: 1.5;
+}
+</style>
+
+<div class="content">
+                <h3> dlaczego my?</h3>
+                <p> Specjalizujemy się w sprzedaży płyt już od wielu lat. Posiadamy również największą kolekcję w mieście, 
+                    a nawet województwie. Jesteśmy polecanym sklepem przez wielu ludzi, a także oferujemy zniżki dla stałych klientów.
+                    Dokładamy wszelkich starań, aby sprowadzać rzadkie płyty i te, które są oczekiwane przez konsumentów.
+                </p>
+                <a class="przycisk" onclick="alert('posiadamy również licencjonowane koszulki zespołów oraz naszywki. Znajdziesz je w naszym stacjonarnym sklepie. Możemy zlecić zamówienie na płytę, chętnie porozmawiamy o muzyce. U nas zawsze panuje miła atmosfera. Zapraszamy!')">dowiedz się więcej</a>
+            </div>
+
+Styleguide 5.2
+*/
+
+.about .row .content {
+    flex: 1 1 40rem;
+}
+
+
+.about .row .content h3 {
+    font-size: 3rem;
+    color: #333;
+}
+
+.about .row .content p {
+    font-size: 1.5rem;
+    color: #999;
+    padding: .5rem 0;
+    padding-top: 1rem;
+    line-height: 1.5;
+}
+
+/*
+Styl dla ikony (icons)
+
+Opis:Styl dla kontenera ikon w sekcji "About", zawierający kilka ikon w układzie szeregowym.
+
+Markup: 
+<style>
+.icons_container {
+    background: #efefef;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.icons_container .icons {
+    background: #efefef;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    flex: 1 1 25rem;
+}
+
+.icons_container .icons img {
+    height: 5rem;
+    margin-right: 2rem;
+}
+
+.icons_container .icons h3 {
+    color: #333;
+    padding-bottom: .5rem;
+    font-size: 1.5rem;
+}
+
+.icons_container .icons span {
+    color: #555;
+    font-size: 1.3rem;
+
+}
+</style>
+
+<div class="icons">
+            <img src="jpg/dostawa.png" alt="wysylka">
+            <div class="info">
+                <h3> darmowa wysyłka </h3>
+                <span> dla zamówień powyżej 150zł </span>
+            </div>
+        </div>
+        <div class="icons">
+            <img src="jpg/zwrot.png" alt="zwrot_pieniedzy">
+            <div class="info">
+                <h3> 5 dni na darmowy zwrot </h3>
+                <span> jeśli zamówienie nie spełnia Twoich oczekiwań, masz 5 dni na odesłanie nam produktów </span>
+            </div>
+        </div>
+        <div class="icons">
+            <img src="jpg/bezpieczenstwo.png" alt="bezpieczenstwo">
+            <div class="info">
+                <h3> Szyfrowana płatność </h3>
+                <span> wiele metod płatności </span>
+            </div>
+        </div>
+        <div class="icons">
+            <img src="jpg/faq.png" alt="faq">
+            <div class="info">
+                <h3> FAQ </h3>
+                <span> staramy się odpowiadać jak najszybciej na pytania klientów </span>
+            </div>
+        </div>
+
+Styleguide 5.3
+*/
+
+.icons_container {
+    background: #efefef;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.icons_container .icons {
+    background: #efefef;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    flex: 1 1 25rem;
+}
+
+.icons_container .icons img {
+    height: 5rem;
+    margin-right: 2rem;
+}
+
+.icons_container .icons h3 {
+    color: #333;
+    padding-bottom: .5rem;
+    font-size: 1.5rem;
+}
+
+.icons_container .icons span {
+    color: #555;
+    font-size: 1.3rem;
+
+}
+
+/*
+Styl dla formularz popup.
+
+Opis: Styl dla formularza popup, który pojawia się na ekranie w oknie modalnym.
+
+Markup:
+ <form>
+        <h1>Zaloguj się</h1>
+        <label for="login">Login:</label>
+        <input type="text" id="login" name="login" required>
+
+        <label for="password">Hasło:</label>
+        <input type="password" id="password" name="password" required>
+
+        <input type="submit" value="Zaloguj">
+      </form>
+      <span class="close-popup">&times;</span>
+</form>
+
+Styleguide 6.0
+*/
+
+.popup-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+
+  .popup-form form h1 {
+    margin-bottom: 10px;
+    font-size: 30px;
+    color: #000000;
+  }
+  
+
+  .popup-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .popup-form label {
+    margin-bottom: 5px;
+    font-size: 15px;
+    color: #a6386b;
+  }
+  
+  .popup-form input {
+    margin-bottom: 10px;
+    padding: 8px;
+    color: #a6386b;
+  }
+  
+  .popup-form .close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #a6386b;
+  }
+  
+
+/*
+Styl dla produktów (Products)
+
+Opis:Styl dla kontenera produktów, zawierający produkty w układzie siatki.
+ 
+Markup:
+<style>
+.products .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+</style>
+
+ <div class="box">
+                <span class="discount">-5%</span>
+                <div class="image">
+                    <img src="jpg/deftones_diamondyeyes.jpg" alt="plyta_cd">
+                    <div class="icons">
+                        <a class="fas fa-heart"></a>
+                        <a class="cart-btn"> do koszyka</a>
+                        <a class="fas fa-share" onclick="alert('udostępniono!')"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>Deftones - Diamond Eyes </h3>
+                    <div class="price"> 38zł <span> 40zł</span></div>
+                </div>
+            </div>
+Styleguide 7.0
+*/
+
+
+.products .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+/*
+Styl dla pojedynczego produktu.
+
+Opis: Styl dla pojedynczego produktu w sekcji "Products", zawierający efekt cienia, zaokrąglenie rogów i inne style.
+
+Markup:
+<style>
+.products .box-container .box {
+    flex: 1 1 30rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    position: relative;
+}
+</style>
+
+ <div class="box">
+                <span class="discount">-5%</span>
+                <div class="image">
+                    <img src="jpg/deftones_diamondyeyes.jpg" alt="plyta_cd">
+                    <div class="icons">
+                        <a class="fas fa-heart"></a>
+                        <a class="cart-btn"> do koszyka</a>
+                        <a class="fas fa-share" onclick="alert('udostępniono!')"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>Deftones - Diamond Eyes </h3>
+                    <div class="price"> 38zł <span> 40zł</span></div>
+                </div>
+            </div>
+
+Styleguide 7.1
+*/
+
+
+.products .box-container .box {
+    flex: 1 1 30rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    position: relative;
+}
+
+/*
+Styl dla zniżek dla produktów.
+
+Opis: Styl dla zniżki na produkcie.
+
+Markup:
+ <div class="content">
+                    <h3>Deftones - Diamond Eyes </h3>
+                    <div class="price"> 38zł <span> 40zł</span></div>
+                </div>
+
+Styleguide 7.2
+*/
+.products .box-container .box .discount {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: .7rem 1rem;
+    font-size: 2rem;
+    color: #ffffff;
+    background: rgba(23, 0, 12, 0.5);
+    z-index: 1;
+    border-radius: .5rem;
+}
+
+.products .box-container .box .image {
+    position: relative;
+    text-align: center;
+    padding-top: 2rem;
+    overflow: hidden;
+}
+
+.products .box-container .box .image img {
+    height: 25rem;
+}
+
+
+.products .box-container .box:hover .image img {
+    transform: scale(1.1);
+
+}
+
+.products .box-container .box .image .icons {
+    position: absolute;
+    bottom: -7rem;
+    left: 0;
+    right: 0;
+    display: flex;
+}
+
+.products .box-container .box:hover .image .icons {
+    bottom: 0;
+}
+
+.products .box-container .box .image .icons a{
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 2rem;
+    width: 50%;
+    background:#a6386b;
+    color: #efefef;
+}
+
+.products .box-container .box .image .icons .cart-btn{
+    border-left: .1rem solid #fff7;
+    border-right:.1rem solid #fff7;
+    width: 100%;
+}
+
+.products .box-container .box .image .icons a:hover{
+    background: #333;;
+}
+
+.products .box-container .box .content {
+    padding: 2rem;
+    text-align: center;
+}
+
+.products .box-container .box .content h3 {
+    font-size: 2.5rem;
+    color: #333;
+
+}
+
+.products .box-container .box .content .price {
+    font-size: 2.5rem;
+    color:#a6386b;
+    font-weight: bolder;
+    padding-top: 1rem;
+}
+
+.products .box-container .box .content .price span {
+    font-size: 2.5rem;
+    color:#999;
+    font-weight: lighter;
+    text-decoration: line-through;
+}
+
+/*
+Styl dla slider
+
+Opis: Styl dla slidera zawierającego obrazy z efektem przejścia między slajdami.
+
+Markup:
+<style>
+#slider {
+    margin: 0 auto;
+    width: 300px;
+    max-width: 100%;
+    text-align: center;
+ }
+
+ #slider input[type=radio] {
+    display: none;
+ }
+
+ #slider label {
+    cursor:pointer;
+    text-decoration: none;
+ }
+
+ </style>
+
+<div id="slider">
+        <input type="radio" name="slider" id="slide1" checked>
+        <input type="radio" name="slider" id="slide2">
+        <input type="radio" name="slider" id="slide3">
+        <input type="radio" name="slider" id="slide4">
+        <div id="slides">
+           <div id="overflow">
+              <div class="inner">
+                 <div class="slide slide_1">
+                    <div class="slide-content">
+                       <h2>Gorillaz</h2>
+                   </div>
+                 </div>
+                 <div class="slide slide_2">
+                    <div class="slide-content">
+                       <h2>The Doors</h2>
+                       
+                    </div>
+                 </div>
+                 <div class="slide slide_3">
+                    <div class="slide-content">
+                       <h2>The Beatles</h2>
+                       
+                    </div>
+                 </div>
+                 <div class="slide slide_4">
+                    <div class="slide-content">
+                       <h2>Hey</h2>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+        <div id="controls">
+           <label for="slide1"></label>
+           <label for="slide2"></label>
+           <label for="slide3"></label>
+           <label for="slide4"></label>
+        </div>
+        <div id="bullets">
+           <label for="slide1"></label>
+           <label for="slide2"></label>
+           <label for="slide3"></label>
+           <label for="slide4"></label>
+        </div>
+     </div>
+
+Styleguide 8.0
+*/
+
+#slider {
+    margin: 0 auto;
+    width: 300px;
+    max-width: 100%;
+    text-align: center;
+ }
+
+ #slider input[type=radio] {
+    display: none;
+ }
+
+ #slider label {
+    cursor:pointer;
+    text-decoration: none;
+ }
+
+ /*
+Slider
+
+Opis:Styl dla kontrolki slajdów, zawierający efekt przejścia i obrazy slajdów.
+
+Markup: 
+   <div id="slides">
+           <div id="overflow">
+              <div class="inner">
+                 <div class="slide slide_1">
+                    <div class="slide-content">
+                       <h2>Gorillaz</h2>
+                   </div>
+                 </div>
+                 <div class="slide slide_2">
+                    <div class="slide-content">
+                       <h2>The Doors</h2>
+                       
+                    </div>
+                 </div>
+                 <div class="slide slide_3">
+                    <div class="slide-content">
+                       <h2>The Beatles</h2>
+                       
+                    </div>
+                 </div>
+                 <div class="slide slide_4">
+                    <div class="slide-content">
+                       <h2>Hey</h2>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+        <div id="controls">
+           <label for="slide1"></label>
+           <label for="slide2"></label>
+           <label for="slide3"></label>
+           <label for="slide4"></label>
+        </div>
+        <div id="bullets">
+           <label for="slide1"></label>
+           <label for="slide2"></label>
+           <label for="slide3"></label>
+           <label for="slide4"></label>
+        </div>
+
+Styleguide 8.1
+*/
+
+ #slides {
+    padding: 10px;
+    border: 3px solid #ccc;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+ }
+
+ #overflow {
+    width: 100%;
+    overflow: hidden;
+ }
+
+ #slide1:checked ~ #slides .inner {
+    margin-left: 0;
+ }
+ #slide2:checked ~ #slides .inner {
+    margin-left: -100%;
+ }
+ #slide3:checked ~ #slides .inner {
+    margin-left: -200%;
+ }
+ #slide4:checked ~ #slides .inner {
+    margin-left: -300%;
+ }
+
+ #slides .inner {
+    transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    width: 400%;
+    line-height: 0;
+    height: 300px;
+ }
+
+ #slides .slide {
+    width: 25%;
+    float:left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #efe;
+ }
+
+ #slides .slide-content {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+#slides .slide-content h2 {
+    color: rgba(0, 0, 0, 0.5); 
+    font-size: 20px;
+}
+
+
+ #slides .slide_1 {
+    background: url(jpg/gorillaz.jpg) no-repeat;
+ }
+
+ #slides .slide_2 {
+    background: url(jpg/thedoors_morrisionhotel.jpg) no-repeat;
+ }
+ #slides .slide_3 {
+    background: url(jpg/thebeatles_1.jpg) no-repeat;
+ }
+ #slides .slide_4 {
+    background: url(jpg/hey_karma.jpg);
+ }
+
+ #controls {
+    margin: -180px 0 0 0;
+    width: 100%;
+    height: 50px;
+    z-index: 3;
+    position: relative;
+ }
+
+ #controls label {
+    transition: opacity 0.2s ease-out;
+    display: none;
+    width: 50px;
+    height: 50px;
+    opacity: .4;
+ }
+
+ #controls label:hover {
+    opacity: 1;
+ }
+
+ #slide1:checked ~ #controls label:nth-child(2),
+ #slide2:checked ~ #controls label:nth-child(3),
+ #slide3:checked ~ #controls label:nth-child(4),
+ #slide4:checked ~ #controls label:nth-child(1) {
+    float:right;
+    margin: 0 -50px 0 0;
+    display: block;
+ }
+
+ #slide1:checked ~ #controls label:nth-last-child(2),
+ #slide2:checked ~ #controls label:nth-last-child(3),
+ #slide3:checked ~ #controls label:nth-last-child(4),
+ #slide4:checked ~ #controls label:nth-last-child(1) {
+    float:left;
+    margin: 0 0 0 -50px;
+    display: block;
+ }
+
+ #bullets {
+    margin: 150px 0 0;
+    text-align: center;
+ }
+
+ #bullets label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius:100%;
+    background: #ccc;
+    margin: 0 10px;
+ }
+
+ #slide1:checked ~ #bullets label:nth-child(1),
+ #slide2:checked ~ #bullets label:nth-child(2),
+ #slide3:checked ~ #bullets label:nth-child(3),
+ #slide4:checked ~ #bullets label:nth-child(4) {
+    background: #444;
+ }
+
+/*
+ Styl dla recenzji klientów
+
+ Opis: Styl dla sekcji zawierającej recenzje klientów, zawierający recenzje w układzie siatki.
+
+ Markup:
+  <div class="box-container">
+            <div class="box">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  
+                </div>
+                <p> Płyty nie w moim klimacie. Kontakt bezproblemowy, ale nie znalazłem nic dla siebie. Kot słucha za mnie, 
+                    chyba mu sie podoba, dużo miałczy. </p>
+                <div class="customer">
+                    <div class="customer_nick">
+                        <h3> Annonymous</h3>
+                        <span> średnio hepi, za to kot hepi hepi hepi </span>
+                    </div>
+                </div>
+                <span class="fas fa-quote-right"> </span>
+            </div>
+
+            <div class="box">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p> Dziękuję za składankę kolęd Krzysztofa Krawczyka, 
+                    kocham jej słuchać z synem jednym w trójcy, poprawia mi humor i życie domowe. Pozdrawiam. </p>
+                <div class="customer">
+                    <div class="customer_nick">
+                        <h3> Borzenna</h3>
+                        <span> hepi hepi hepi </span>
+                    </div>
+                </div>
+                <span class="fas fa-quote-right"> </span>
+            </div>
+
+            
+            <div class="box">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p> Otrzymałam od męża płytę, nie wiedziałam co to za płyta, ale od momentu pierwszego odsłuchu nie mogę przestać jej słuchać. 
+                    Objawiła mi ukryty talent: śpiew. Będę tu zaglądać po więcej! </p>
+                <div class="customer">
+                    <div class="customer_nick">
+                        <h3> BEATRON3000 </h3>
+                        <span> hepi hepi hepi </span>
+                    </div>
+                </div>
+                <span class="fas fa-quote-right"> </span>
+            </div>
+         </div>
+ 
+ Styleguide 9.0
+ */
+
+
+.review .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+/*
+Styl dla pojedynczej recenzji.
+
+Opis: Styl dla pojedynczej recenzji, zawierający cień i zaokrąglenie rogów.
+
+Markup:
+<div class="box">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p> Dziękuję za składankę kolęd Krzysztofa Krawczyka, 
+                    kocham jej słuchać z synem jednym w trójcy, poprawia mi humor i życie domowe. Pozdrawiam. </p>
+                <div class="customer">
+                    <div class="customer_nick">
+                        <h3> Borzenna</h3>
+                        <span> hepi hepi hepi </span>
+                    </div>
+                </div>
+                <span class="fas fa-quote-right"> </span>
+            </div>
+
+Styleguide 9.1
+*/
+.review .box-container .box {
+    flex: 1 1 30rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    padding: 3rem 2rem;
+    position: relative;
+    border: .1rem solid rgba(0, 0, 0, .1);
+}
+
+/*
+Recenzje cytaty
+
+Opis: Styl dla ikony cytatów na recenzji.
+
+Markup:
+ <p> Dziękuję za składankę kolęd Krzysztofa Krawczyka, kocham jej słuchać z synem jednym w trójcy, poprawia mi humor i życie domowe. Pozdrawiam. </p>
+
+Styleguide 9.2
+*/
+.review .box-container .box .fa-quote-right { 
+    position: absolute;
+    bottom: 3rem;
+    right: 3rem;
+    font-size: 6rem;
+    color: #efefef;
+}
+
+.review .box-container .box .customer {
+    display: flex;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.review .box-container .box .stars i {
+    color: #a6386b;
+    font-size: 2rem;
+
+}
+
+.review .box-container .box p {
+    color: #999;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    padding-top: 2rem;
+}
+
+/*
+Styl dla elementów w recenzji.
+
+Opis: Styl dla elementów w recenzji, takich jak imię klienta, gwiazdki i treść recenzji.
+
+Markup:
+ <div class="customer_nick">
+                        <h3> Borzenna</h3>
+                        <span> hepi hepi hepi </span>
+                    </div>
+
+Styleguide 9.3
+*/
+.review .box-container .box .customer h3 {
+    font-size: 2rem;
+    color: #333;
+
+}
+
+.review .box-container .box .customer span {
+    font-size: 1.5rem;
+    color: #999;
+    
+}
+
+/*
+Styl dla kontakt.
+
+Opis: Styl dla sekcji "Kontakt", zawierający formularz i obraz.
+
+Markup:
+<h1 class="heading"> <span> skontaktuj się z </span> nami </h1>
+
+        <div class="row">
+            <form action="">
+                <input type="text" placeholder="imie i nazwisko" class="box">
+                <input type="email" placeholder="email" class="box">
+                <input type="number" placeholder="numer telefonu" class="box">
+                <textarea name="text" class="box" placeholder="wiadomość" id="" cols="30" rows="10"> </textarea>
+                <input type="checkbox" value="akceptacja" class="przycisk">akceptuję warunki kulturalnych wiadomości
+                <input type="submit" value="wyślij wiadomość" class="przycisk" onclick="alert('dziękujęmy za kontakt. dołożymy starań, aby odpowiedzieć jak najszybciej.')">
+                
+            </form>
+
+            <div class="image">
+                <img src="jpg/sprzedawcy.jpg" alt="zdjecie_sprzedawcow">
+            </div>
+        </div>
+
+Styleguide 10.0
+*/
+
+.contact .row {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+/*
+Styl dla formularza kontaktowego, zawierający pola formularza, pole tekstowe i przycisk.
+
+Markup:
+ <form action="">
+                <input type="text" placeholder="imie i nazwisko" class="box">
+                <input type="email" placeholder="email" class="box">
+                <input type="number" placeholder="numer telefonu" class="box">
+                <textarea name="text" class="box" placeholder="wiadomość" id="" cols="30" rows="10"> </textarea>
+                <input type="checkbox" value="akceptacja" class="przycisk">akceptuję warunki kulturalnych wiadomości
+                <input type="submit" value="wyślij wiadomość" class="przycisk" onclick="alert('dziękujęmy za kontakt. dołożymy starań, aby odpowiedzieć jak najszybciej.')">
+                
+            </form>
+
+Styleguide 10.1
+*/
+.contact .row form {
+    flex: 1 1 40rem;
+    padding: 2rem 2.5rem;
+    box-shadow: 0.5rem 1.5rem rgba(0, 0, 0, .1);
+    border: .1rem solid rgba(0, 0, 0, .1);
+    background: #efefef;
+    border-radius: .5rem;
+}
+
+/*
+Styl dla obrazu.
+
+Opis: Styl dla obrazu w sekcji "Kontakt".
+
+Markup:
+ <div class="image">
+                <img src="jpg/sprzedawcy.jpg" alt="zdjecie_sprzedawcow">
+            </div>
+
+Styleguide 10.2
+*/
+.contact .row .image {
+    flex: 1 1 40rem;
+}
+
+.contact .row .image img {
+   width: 100%;
+}
+
+.contact .row form .box {
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: #333;
+    text-transform: none;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    margin: .7rem 0;
+    width: 100%;
+}
+
+.contact .row form .box:focus {
+    border-color: #a6386b;
+
+}
+
+.contact .row form textarea {
+    height: 15rem;
+    resize: none;
+}
+
+/*
+Styl dla stopki.
+
+Opis: Styl dla stopki strony, zawierający sekcję z linkami.
+
+Markup:
+<style>
+.footer {
+    width: 100%;
+    background: #a899a0;
+}
+</style>
+
+Styleguide 11.0
+*/
+
+.footer {
+    width: 100%;
+    background: #a899a0;
+}
+
+/*
+Stopka dla kontenera.
+
+Opis:Styl dla kontenera w stopce, zawierający linki i nagłówki.
+
+Markup:
+<style>
+.footer .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    background: #a899a0;
+    padding: 2rem; 
+}
+</style>
+
+ <div class="box-container">
+            <div class="box">
+                <h3> szybki dostęp </h3>
+                <a href="#"> główna </a>
+                <a href="#"> o nas </a>
+                <a href="#"> produkty </a>
+                <a href="#"> recenzje </a>
+                <a href="#"> kontakt </a>
+            </div>
+
+Styleguide 11.1
+*/
+
+.footer .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    background: #a899a0;
+    padding: 2rem; 
+}
+
+/*
+Stopka
+
+Opis:Styl dla pojedynczego bloku w stopce, zawierający nagłówek i linki.
+
+Markup:
+<div class="box">
+            <h3> znajdź nas </h3>
+            <a href="#"> <ion-icon name="logo-facebook"></ion-icon> facebook </a>
+            <a href="#"> <ion-icon name="logo-amazon"></ion-icon> amazon </ion-icon> </a>
+            <a href="#"> <ion-icon name="logo-google-playstore"></ion-icon> google play </a>
+            <a href="#"> <ion-icon name="logo-apple-appstore"></ion-icon> apple store </a>
+        </div>
+
+Styleguide 11.2
+*/
+.footer .box-container .box {
+    flex: 1 1 25rem;
+}
+
+.footer .box-container .box h3 {
+    color: #333;
+    font-size: 2.5rem;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a {
+    display: block;
+    color: #666;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a:hover {
+    color: #a6386b;
+    text-decoration: underline;
+}
+
+
+
+@media (max-width:991px) {
+
+    html {
+        font-size: 55%;
+    }
+
+    header {
+        padding:2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+    .home{
+        background-position: left;
+    }
+}
+
+
+
+
+@media (max-width:768px) {
+    header .fa-bars {
+        display: block;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: #eee;
+        border-top: .1rem solid rgba(0,0,0,.1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header #toggler:checked ~ .navbar {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    header .navbar a {
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: #fff;
+        border: .1rem solid rgba(0,0,0,.1);
+        display: block;
+    }
+
+    .home .content h3 {
+        font-size: 5rem;
+
+    }
+
+    .home .content span {
+        font-size: 2.5rem;
+        
+    }
+
+}
+
+@media (max-width:450px) {
+    html {
+        font-size: 50%;
+    }
+
+
+
+    .heading {
+        font-size: 3rem;
+
+    }
+}
+
+
+@media screen and (max-width: 300px) {
+    #slide1:checked ~ #controls label:nth-child(2),
+    #slide2:checked ~ #controls label:nth-child(3),
+    #slide3:checked ~ #controls label:nth-child(4),
+    #slide4:checked ~ #controls label:nth-child(1),
+    #slide1:checked ~ #controls label:nth-last-child(2),
+    #slide2:checked ~ #controls label:nth-last-child(3),
+    #slide3:checked ~ #controls label:nth-last-child(4),
+    #slide4:checked ~ #controls label:nth-last-child(1) {
+       margin: 0;
+    }
+    #slides {
+       max-width: calc(100% - 140px);
+       margin: 0 auto;
+    }
+ }
+  
